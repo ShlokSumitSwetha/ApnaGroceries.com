@@ -24,13 +24,6 @@ const routes: Routes = [
         loadChildren: () =>
           import("./views/pages/user/user.module").then((m) => m.UserModule),
       },
-      {
-        path: "task-board",
-        loadChildren: () =>
-          import("./views/pages/task-board/task-board.module").then(
-            (m) => m.TaskBoardModule
-          ),
-      },
     ],
   },
   { path: "no-access", component: NoAccessComponent },

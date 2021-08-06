@@ -1,8 +1,7 @@
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <!-- Navbar brand -->
-  <a class="navbar-brand" href="javascript:;;">Sumith</a>
-
+  <img src="./assets/logo/logo.png" width="64" height="64" />
   <!-- Collapse button -->
   <button
     class="navbar-toggler"
@@ -34,17 +33,6 @@
           >{{ this.translate.data["PRODUCTS"] | translate }}</a
         >
       </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="jaascript:;;"
-          [routerLink]="['/task-board/tasks']"
-          >{{ this.translate.data["TASKBOARD"] | translate }}</a
-        >
-      </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li> -->
     </ul>
     <!-- Links -->
 
@@ -153,11 +141,6 @@
         <a class="nav-link" (click)="logout()">
           <i class="fa fa-sign-in mr-1"></i
           >{{ this.translate.data["LOGOUT"] | translate }}</a
-        >
-      </li>
-      <li class="nav-item">
-        <a href="javascript:;;" class="nav-link"
-          >Angular v-{{ angularVersion.full }}</a
         >
       </li>
     </ul>

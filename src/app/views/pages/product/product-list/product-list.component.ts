@@ -10,8 +10,8 @@ import { ToastrService } from "src/app/shared/services/toastr.service";
 })
 export class ProductListComponent implements OnInit {
   productList: Product[];
+  brands: string[];
   loading = false;
-  brands = ["All", "Apple", "Realme", "Nokia", "Motorolla"];
 
   selectedBrand: "All";
 
@@ -24,6 +24,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.getAllProducts();
+    console.log(this.brands);
   }
 
   getAllProducts() {
@@ -33,10 +34,15 @@ export class ProductListComponent implements OnInit {
       (product) => {
         this.loading = false;
         this.productList = [];
+        this.brands = ["All"];
         product.forEach((element) => {
           const y = { ...element.payload.toJSON(), $key: element.key };
-          this.productList.push(y as Product);
+          const p = y as Product;
+          this.productList.push(p);
+          console.log("Seller here" + p.productSeller);
+          this.brands.push(p.productSeller.valueOf());
         });
+        this.brands = [...new Set( this.brands)];
       },
       (err) => {
         this.toastrService.error("Error while fetching Products", err);

@@ -1,10 +1,10 @@
 {
-  "TITLE": "Angular Shopping Cart",
+  "TITLE": "Apna Groceries",
   "HOME": "Home",
   "PRODUCTS": "Our Products",
   "TASKBOARD": "Work Board",
   "CONTACT": "Contact",
-  "SIGNIN": "SignIn/SignUp",
+  "SIGNIN": "Login",
   "MYACCOUNT": "My Account",
   "LOGOUT": "Log Out",
   "BESTPRODUCTS": "Our Best Products",
